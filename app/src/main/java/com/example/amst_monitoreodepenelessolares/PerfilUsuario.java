@@ -86,7 +86,7 @@ public class PerfilUsuario extends AppCompatActivity {
     }
 
     public void revisarSensores(View v){
-        Intent red_sensores = new Intent(getBaseContext(), RedSensores.class);
+        Intent red_sensores = new Intent(getBaseContext(), Sensores.class);
         red_sensores.putExtra("token", token);
         startActivity(red_sensores);
     }
