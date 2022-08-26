@@ -1,5 +1,7 @@
 package com.example.amst_monitoreodepenelessolares;
 
+// con esta clase se obtiene la informacion que se encuentra dentro del grupo paneles para luego
+// ser mostrados en la actividad de sensores
 public class paneles {
 
     String posicion;

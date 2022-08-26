@@ -20,6 +20,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
+// esta clase obtiene la informacion de la base de datos de firebase para mostrarlas en la aplicacion
+// ademas configura el boton de actualizar el cual actualizará la informacion en tiempo real de la base de
+// datos
 public class Sensores extends AppCompatActivity {
 
     DatabaseReference mRootReference;
@@ -31,6 +34,7 @@ public class Sensores extends AppCompatActivity {
     private TextView mPosicionVal;
     private TextView mVoltVal;
 
+    // verificara los datos en el xml para posteriormente darle su respectivo valor obtenido
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,7 @@ public class Sensores extends AppCompatActivity {
         mPosicionVal = (TextView) findViewById(R.id.PosicionVal);
         mVoltVal = (TextView) findViewById(R.id.VoltVal);
 
+        // boton para obtener la informacion de la base de datos y actualizarla
 
         mRootReference = FirebaseDatabase.getInstance().getReference();
         mButtonActualizar.setOnClickListener(new View.OnClickListener() {
@@ -55,13 +60,13 @@ public class Sensores extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
-
-
+                            // realiza una iteracion dentro de Usuario para seleccionar los datos dentro del grupo
                             for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                 Usuario usuario = snapshot.getValue(Usuario.class);
                                 String correo = usuario.getCorreo();
                                 String nombre = usuario.getNombre();
 
+                                // da un nuevo valor a la variable para ser posteriormente mostrada
                                 mCargaVal.setText(usuario.getPaneles().getCarga());
                                 mEstadoVal.setText(usuario.getPaneles().getEstado());
                                 mPosicionVal.setText(usuario.getPaneles().getPosicion());

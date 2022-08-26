@@ -19,6 +19,9 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 import java.util.Map;
 
+// clase donde se muestra la informacíón del usuario que se ha logeado en la aplicacion
+// ademas tres botones, datos del panel, historial y cierre de sesion
+
 public class PerfilUsuario extends AppCompatActivity {
 
     TextView txt_id, txt_name, txt_email;
@@ -26,6 +29,8 @@ public class PerfilUsuario extends AppCompatActivity {
     DatabaseReference db_reference;
     String token = "";
 
+    // obtiene la informacion del usuario logeado para mostrarlo en pantalla,
+    // los datos a mostrar son de userId, nombre, correo y una foto.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,48 +53,25 @@ public class PerfilUsuario extends AppCompatActivity {
         Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
 
         iniciarBaseDeDatos();
-        leerTweets();
-        escribirTweets(info_user.get("user_name"));
-    }
-    private void escribirTweets(String user_name) {
-        String tweet = "hola mundo firebase 2";
-        String fecha = "19/06/2022"; //Fecha actual
-        String autor= "Holguin, Moran, Tumbaco";
-        Map<String, String> hola_tweet = new HashMap<String, String>();
-        hola_tweet.put("autor", autor);
-        hola_tweet.put("fecha", fecha);
-        DatabaseReference tweets = db_reference.child("Grupo2").child("tweets");
-        tweets.setValue(tweet);
-        tweets.child(tweet).child("autor").setValue(autor);
-        tweets.child(tweet).child("fecha").setValue(fecha);
+
     }
 
-    private void leerTweets() {
-        db_reference.child("Grupo2").child("tweets")
-                .addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            System.out.println(snapshot);
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError error) {
-                        System.out.println(error.toException());
-                    }
-                });
-    }
-
+    // inicia la base de datos y obtiene los valores dentro de grupos
     private void iniciarBaseDeDatos() {
         db_reference = FirebaseDatabase.getInstance().getReference().child("Grupos");
     }
 
+    // Boton que redirige hacia la actividad Sensores donde se muestra la información recopilada
+    // por el panel solar
     public void revisarSensores(View v){
         Intent red_sensores = new Intent(getBaseContext(), Sensores.class);
         red_sensores.putExtra("token", token);
         startActivity(red_sensores);
     }
+
+    //activa el boton de cierre de sesion el cual desvincula la cuenta de google con la aplicacion
+    //lo que permite el ingreso de un nuevo usuario
+
     public void cerrarSesion(View view){
         FirebaseAuth.getInstance().signOut();
         finish();

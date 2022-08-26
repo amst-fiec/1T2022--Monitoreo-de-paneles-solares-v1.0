@@ -28,13 +28,19 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 import java.util.HashMap;
 
+// clase principal de la aplicacion, aqui se realiza el login a la base de datos de Firebase
+// utilizando cuenta de google
+
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     GoogleSignInClient mGoogleSignInClient;
 
+    // aqui se llama la funcion de inicio de sesion por Google
     public void iniciarSesion(View view) {
         resultLauncher.launch(new Intent(mGoogleSignInClient.getSignInIntent()));
     }
+
+    // se obtiene los datos de la cuenta para realizar el inicio de sesion con google a Firebase
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    // se cierra sesion en la aplicacion que desvincula la cuenta de google
+    // para ingresar con otro usuario
+
     private void cerrarSesion() {
         mGoogleSignInClient.signOut().addOnCompleteListener(this,
                 task -> updateUI(null));
@@ -79,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+    // autenticacion de los datos para el ingreso a la base de datos de firebase
+
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d("TAG", "firebaseAuthWithGoogle:" + acct.getId());
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(),
@@ -93,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    //pasa la informacion obtenida en el inicio de sesion para que sea mostrada en la siguiente ventana
+    //la cual contiene los datos del usuario logeado en la aplicacion
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
