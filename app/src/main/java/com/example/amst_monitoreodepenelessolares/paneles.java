@@ -5,6 +5,8 @@ public class paneles {
     String posicion;
     String carga;
     String estado;
+    String voltaje;
+
 
     public paneles() {
     }
@@ -37,5 +39,13 @@ public class paneles {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public String getVoltaje() {
+        return voltaje;
+    }
+
+    public void setVoltaje(String voltaje) {
+        this.voltaje = voltaje;
     }
 }

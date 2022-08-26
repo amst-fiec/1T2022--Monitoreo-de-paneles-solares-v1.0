@@ -65,26 +65,9 @@ public class Sensores extends AppCompatActivity {
                                 mCargaVal.setText(usuario.getPaneles().getCarga());
                                 mEstadoVal.setText(usuario.getPaneles().getEstado());
                                 mPosicionVal.setText(usuario.getPaneles().getPosicion());
-                                //mVoltVal.setText(voltaje);
-
-
-                                //DataSnapshot paneles = snapshot.child("Usuario").child("paneles");
-                                //String panelesValor = paneles.getValue().toString();
+                                mVoltVal.setText(usuario.getPaneles().getVoltaje());
                             }
 
-                            //String carga = dataSnapshot.child("carga").getValue().toString();
-
-                                /*DataSnapshot paneles = dataSnapshot.child("paneles");
-                                String carga = dataSnapshot.child("paneles").child("carga").getValue().toString();
-                                String estado = dataSnapshot.child("estado").getValue().toString();
-                                String posicion = dataSnapshot.child("posicion").getValue().toString();
-                                String voltaje = dataSnapshot.child("voltaje").getValue().toString();
-                                System.out.println(carga);
-                                Log.d("aquiestoy", "hola");
-                                mCargaVal.setText(carga);
-                                mEstadoVal.setText(estado);
-                                mPosicionVal.setText(posicion);
-                                mVoltVal.setText(voltaje);*/
                         }
 
                     }
