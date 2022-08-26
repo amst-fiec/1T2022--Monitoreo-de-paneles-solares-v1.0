@@ -39,17 +39,17 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:paddingRight="2dp"
-                android:text="Activo"
+                android:text="Estado"
                 android:textSize="24sp"
                 />
             <TextView
-                android:id="@+id/actVal"
+                android:id="@+id/EstadoVal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right|center_vertical"
                 android:paddingRight="30dp"
-                android:text="Si"
+                android:text=""
                 android:textSize="24sp"
                 />
         </LinearLayout>
@@ -73,17 +73,17 @@
                 android:layout_height="63dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="Bateria"
+                android:text="Carga"
                 android:textSize="24sp"
                 />
             <TextView
-                android:id="@+id/bateriaVal"
+                android:id="@+id/CargaVal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right|center_vertical"
                 android:paddingRight="30dp"
-                android:text="%"
+                android:text=""
                 android:textSize="24sp"
                 />
         </LinearLayout>
@@ -104,17 +104,51 @@
                 android:layout_height="63dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="Angulo"
+                android:text="Posición"
                 android:textSize="24sp"
                 />
             <TextView
-                android:id="@+id/anguloVal"
+                android:id="@+id/PosicionVal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right|center_vertical"
                 android:paddingRight="30dp"
-                android:text="°"
+                android:text=""
+                android:textSize="24sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="71dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                app:srcCompat="@drawable/volt" />
+
+            <TextView
+                android:id="@+id/voltTx"
+                android:layout_width="wrap_content"
+                android:layout_height="63dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Voltaje"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:id="@+id/VoltVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:paddingRight="30dp"
+                android:text=""
                 android:textSize="24sp"
                 />
         </LinearLayout>
@@ -124,7 +158,7 @@
             android:orientation="horizontal"
             android:paddingTop="60dp">
             <Button
-                android:id="@+id/btn_datos"
+                android:id="@+id/btn_actualizar"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Actualizar"

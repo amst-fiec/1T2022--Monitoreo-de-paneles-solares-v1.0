@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "221874652709",
+    "project_id": "amstg2",
+    "storage_bucket": "amstg2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221874652709:android:73c4f1a81dbe4c0975a1cc",
+        "android_client_info": {
+          "package_name": "com.example.amst_monitoreodepenelessolares"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "221874652709-5kqsglta5a7c77momedgujpqm1h7gfl1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.amst_monitoreodepenelessolares",
+            "certificate_hash": "b4982a236c116762743c4b9a9b6b0588d85f9595"
+          }
+        },
+        {
+          "client_id": "221874652709-96igkjqkuct4ac2sip3oi2u1mtlketlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUXbKRyl-1dN43t9PY_YQE7vpJe3YZb9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "221874652709-96igkjqkuct4ac2sip3oi2u1mtlketlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
