@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:221874652709:android:73c4f1a81dbe4c0975a1cc",
         "android_client_info": {
-          "package_name": "com.example.amst_monitoreodepenelessolares"
+          "package_name": "com.intilligenz.amst_monitoreodepenelessolares"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "221874652709-5kqsglta5a7c77momedgujpqm1h7gfl1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.amst_monitoreodepenelessolares",
+            "package_name": "com.intilligenz.amst_monitoreodepenelessolares",
             "certificate_hash": "b4982a236c116762743c4b9a9b6b0588d85f9595"
           }
         },

@@ -1,4 +1,4 @@
-package com.example.amst_monitoreodepenelessolares.g2;
+package com.intilligenz.amst_monitoreodepenelessolares.g2;
 
 import android.app.Notification;
 import android.app.NotificationChannel;

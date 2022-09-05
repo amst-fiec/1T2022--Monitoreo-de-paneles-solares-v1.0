@@ -1,4 +1,4 @@
-package com.example.amst_monitoreodepenelessolares;
+package com.intilligenz.amst_monitoreodepenelessolares;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,15 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
-import java.util.Map;
 
 // clase donde se muestra la informacíón del usuario que se ha logeado en la aplicacion
 // ademas tres botones, datos del panel, historial y cierre de sesion

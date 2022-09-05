@@ -1,4 +1,4 @@
-package com.example.amst_monitoreodepenelessolares;
+package com.intilligenz.amst_monitoreodepenelessolares;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -9,11 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -83,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                             GoogleSignInAccount account = task.getResult(ApiException.class);
                             if (account != null) firebaseAuthWithGoogle(account);
                         } catch (ApiException e) {
-                            Log.w("TAG", "Fallo el inicio de sesión con google.", e);
+                            //Log.w("TAG", "Fallo el inicio de sesión con google.", e);
                         }
                     }
                 }
@@ -92,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     // autenticacion de los datos para el ingreso a la base de datos de firebase
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-        Log.d("TAG", "firebaseAuthWithGoogle:" + acct.getId());
+        //Log.d("TAG", "firebaseAuthWithGoogle:" + acct.getId());
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(),
                 null);
         mAuth.signInWithCredential(credential).addOnCompleteListener(this, task -> {

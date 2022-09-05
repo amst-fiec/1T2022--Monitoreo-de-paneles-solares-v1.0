@@ -1,24 +1,18 @@
-package com.example.amst_monitoreodepenelessolares;
+package com.intilligenz.amst_monitoreodepenelessolares;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.HashMap;
-import java.util.Map;
 
 // esta clase obtiene la informacion de la base de datos de firebase para mostrarlas en la aplicacion
 // ademas configura el boton de actualizar el cual actualizará la informacion en tiempo real de la base de

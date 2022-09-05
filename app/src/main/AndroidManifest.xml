@@ -2,10 +2,12 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.amst_monitoreodepenelessolares">
+    package="com.intilligenz.amst_monitoreodepenelessolares">
 
     <application
-        android:allowBackup="true"
+        android:versionCode="1"
+        android:versionName="1.0"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -15,20 +17,20 @@
         android:theme="@style/Theme.AMST_MonitoreoDePenelesSolares"
         tools:targetApi="31">
         <activity
-            android:name=".Sensores"
+            android:name="com.intilligenz.amst_monitoreodepenelessolares.Sensores"
             android:exported="false" />
         <activity
-            android:name=".PerfilUsuario"
+            android:name="com.intilligenz.amst_monitoreodepenelessolares.PerfilUsuario"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.intilligenz.amst_monitoreodepenelessolares.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".g2.MyFirebaseInstanceService"
+        <service android:name="com.intilligenz.amst_monitoreodepenelessolares.g2.MyFirebaseInstanceService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

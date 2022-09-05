@@ -1,4 +1,4 @@
-package com.example.amst_monitoreodepenelessolares;
+package com.intilligenz.amst_monitoreodepenelessolares;
 
 // Con esta clase se obtiene la información dentro del valor Usuario
 public class Usuario {
